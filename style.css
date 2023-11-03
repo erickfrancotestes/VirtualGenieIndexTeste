@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content{
+	margin-top: 5%; /* Mantém a margem superior atual */
+    margin-bottom: 50px; /* Adiciona uma margem inferior para separar o conteúdo do rodapé */
+    max-width: 600px;
+    color: white;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content h1{
+	font-size: 70px;
+	color: #ffffff;
+}
+.content p{
+	margin: 10px 0 30px;
+	color: #ffffff;
+}
+.content .cad{
+	padding: 12px 80px;
+	font-size: 20px;
+}
+.cad {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    color: #dd6336;
+    border: 2px solid #dd6336;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.2s;
+}
+.cad:hover{
+    background-image: linear-gradient(45deg,#a32c00, #dd6336);
+    color: white;
+}
+.cad:hover::after {
+    width: 100%;
+    transition: width .2s;
+}
+
+.cad::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .4s;
+}
+
+.lg {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    color: #dd6336;
+    border: 2px solid #dd6336;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    transition: 0.2s;
+}
+.lg:hover{
+    background-image: linear-gradient(45deg,#dd6336, #a32c00);
+    color: white;
+}
+.lg:hover::after {
+    width: 100%;
+    transition: width .2s;
+}
+
+.lg::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .4s;
+}
+.teste{
+    text-decoration: none;
+    color: wheat;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(243, 243, 243, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    margin-top: 65px;
+}
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os cards horizontalmente */
+    justify-content: center; /* Centraliza os cards verticalmente */
+}
+  .card .background-div {
+    width: 100%;
+    height: 150px;
+    background-color: #dd6336;
+}
+
+  .card:hover {
+    box-shadow: 1px 8px 40px rgba(255, 255, 255, 0.2);
+  }
+  .card.no-animation {
+    visibility: hidden;
+}  
+  .container {
+    padding: 8px 20px;
+  }
+
+   .card-projeto {
+    /* Estilos específicos para o card "O que é o Projeto" */
+    margin-right: 450px;
+    }
+
+    .card-funciona {
+    /* Estilos específicos para o card "Como Funciona" */
+    margin-left: 450px;
+    }
+
+    .card-proposito {
+    /* Estilos específicos para o card "Qual o Propósito" */
+    margin-right: 450px;
+    }
+
+    .card-funcionalidades {
+    /* Estilos específicos para o card "Quais as Funcionalidades" */
+    margin-left: 450px;
+    }
+    
+    .left-animation.show {
+        animation: fadeInLeft 1s forwards;
+    }
+    
+    .right-animation.show {
+        animation: fadeInRight 1s forwards;
+    }
+    
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    

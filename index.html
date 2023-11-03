@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Genie</title>
+</head>
+
+<body class="bg-dark">
+    <nav class="container-fluid">
+        <div class="d-flex justify-content-around m-4">
+            <h2 class="fw-bold text-white">Virtual Genie</h2>
+            <div>
+                <ul class="d-flex align-items-center" style="list-style-type:none;">
+                    <li class="m-2"><a href="#" class="teste">Projeto</a></li>
+                    <li class="m-2"><a href="#" class="teste">Como Funciona</a></li>
+                    <li class="m-2"><a href="#" class="teste">Propósito</a></li>
+                    <li class="m-2"><a href="#" class="teste">Funcionalidades</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="d-flex align-items-center" type="none">
+                    <li class="m-2"><a href="auth/register.php" class="cad">Cadastrar</a></li>
+                    <li class="m-2"><a href="auth/login.php" class="lg">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Projeto<br>Virtual Genie</h1>
+        <p>Projeto sobre site de Espaço de Aprendizagem.</p>
+        <a href="auth/register.php" class="cad">Registrar Agora</a>
+    </div>
+<div class="card-container">
+    <div class="card card-projeto hidden left-animation" id="projeto">
+        <div class="background-div"></div>
+        <div class="container">
+            <h4><b>O que é o Projeto</b></h4> 
+            <p>Descrição sobre o projeto.</p> 
+        </div> 
+    </div>
+    
+    <div class="card card-funciona hidden right-animation" id="funciona">
+        <div class="background-div"></div>
+        <div class="container">
+            <h4><b>Como Funciona</b></h4> 
+            <p>Explicação de como o projeto funciona.</p> 
+        </div> 
+    </div>
+    
+    <div class="card card-proposito hidden left-animation" id="proposito">
+        <div class="background-div"></div>
+        <div class="container">
+            <h4><b>Qual o Propósito</b></h4> 
+            <p>Objetivo ou propósito do projeto.</p> 
+        </div> 
+    </div>
+    
+    <div class="card card-funcionalidades hidden right-animation" id="funcionalidades">
+        <div class="background-div"></div>
+        <div class="container">
+            <h4><b>Quais as Funcionalidades</b></h4> 
+            <p>Lista de funcionalidades do projeto.</p> 
+        </div> 
+    </div>
+</div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+crossorigin="anonymous"></script>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
+</body>
+
+</html>
